@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4</title>
+    <link rel="stylesheet" href="/static/futsal.css">
+</head>
+<body>
+<div class="div-container">
+
+    <div class="div-block">
+        <h1><p>COPA GUARARAPES</p></h1>
+    </div>
+
+    <nav>
+        <div class="div-inline-block">
+            <ul>
+                <h1><li><a href="{{ url_for('jogador_func') }}">JOGADOR</a></li></h1>
+                <br>
+                <h1><li><a href="{{ url_for('cadastro_jogador') }}">CADASTRO JOGADOR</a></li></h1>
+                <br>
+                <h1><li><a href="{{ url_for('clube') }}">CLUBE</a></li></h1>
+                <br>
+                <h1><li><a href="{{ url_for('campeonato') }}">CAMPEONATO</a></li></h1>
+                <br>
+                <h1><li><a href="{{ url_for('home') }}">INICIO</a></li></h1>
+           </ul>
+        </div>
+
+    </nav>
+
+
+    <div class="div-inline-block-dois">
+        {% block conteudo %}
+        {% endblock conteudo %}
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+
+
+
+<h2>Lista de Jogadores</h2>
+<ul>
+    {% for jogador in lista_jogador %}
+    <li>{{ jogador.nome }} {{ jogador.sobrenome }} - Clube ID: {{ jogador.id_clube }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('cadastro_jogador') }}">Cadastrar Jogador</a>
+
+
+
+{% endblock conteudo %}

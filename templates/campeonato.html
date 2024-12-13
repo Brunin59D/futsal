@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+    <h1>Lista de Campeonatos</h1>
+    {% if campeonatos %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome do Campeonato</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for campeonato in campeonatos %}
+            <tr>
+                <td>{{ campeonato.id_campeonato }}</td>
+                <td>{{ campeonato.nome_campeonato }}</td>
+                <td>{{ campeonato.descricao_campeonato }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Nenhum campeonato cadastrado.</p>
+    {% endif %}
+    <a href="{{ url_for('cadastro_campeonato') }}">Cadastrar Novo Campeonato</a>
+
+
+{% endblock conteudo %}

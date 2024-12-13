@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+
+<h2>Lista de Clubes</h2>
+<ul>
+    {% for clube in lista %}
+    <li>{{ clube.nome_clube }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('cadastro_clube') }}">Cadastrar Clube</a>
+
+
+
+{% endblock conteudo %}

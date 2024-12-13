@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <h1>Cadastrar Novo Jogador</h1>
+    <form action="{{ url_for('cadastro_jogador') }}" method="POST">
+        <label for="form_nome">Nome:</label>
+        <input type="text" id="form_nome" name="form_nome" required>
+        <br><br>
+
+        <label for="form_sobrenome">Sobrenome:</label>
+        <input type="text" id="form_sobrenome" name="form_sobrenome" required>
+        <br><br>
+
+        <label for="form_cpf">CPF:</label>
+        <input type="text" id="form_cpf" name="form_cpf" required>
+        <br><br>
+
+        <label for="form_numero">Número da Camisa:</label>
+        <input type="number" id="form_numero" name="form_numero" required>
+        <br><br>
+
+        <label for="form_id_clube">ID do Clube:</label>
+        <input type="number" id="form_id_clube" name="form_id_clube" required>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <a href="{{ url_for('jogador_func') }}">Voltar para a lista de jogadores</a>
+
+
+{% endblock conteudo %}

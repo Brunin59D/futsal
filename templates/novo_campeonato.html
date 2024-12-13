@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+
+
+<h1>Cadastrar Novo Campeonato</h1>
+    <form action="{{ url_for('cadastro_campeonato') }}" method="POST">
+        <label for="form_nome_campeonato">Nome do Campeonato:</label>
+        <input type="text" id="form_nome_campeonato" name="form_nome_campeonato" required>
+        <br><br>
+        <label for="form_descricao_campeonato">Descrição do Campeonato:</label>
+        <textarea id="form_descricao_campeonato" name="form_descricao_campeonato" required></textarea>
+        <br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <a href="{{ url_for('campeonato') }}">Voltar para a lista de campeonatos</a>
+
+{% endblock conteudo %}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.div-container {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.div-block {
+    background-color: deepskyblue;
+    height: 70px;
+    border: solid 2px black;
+}
+.div-inline-block {
+    background-color: deepskyblue;
+    display: inline-block;
+    height: 700px;
+    width: 250px;
+    border: solid 2px black;
+    float: left
+}
+.div-inline-block-dois {
+    background-color: white;
+    display: inline-block;
+    height: 600px;
+    width: 60%;
+}
+
+.card_pessoa {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.card_atividades{
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue;
+}
